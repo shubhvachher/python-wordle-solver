@@ -1,6 +1,6 @@
 import numpy as np
 
-dictionary_location = './english-words/five_letter_english_words.txt'
+dictionary_location = './english-words/words_alpha.txt'
 wordle_word_length = 5
 
 with open(dictionary_location) as word_file:
