@@ -128,19 +128,20 @@ So, if we know that
 
 Then, 
 
-Word Config will be : U So U U St (without spaces) (Unknown, Stable Letter "O", Unknown, Unknown, "Stable Letter "T")
+Word Config will be : U So U U St (without spaces, with "U" and "S" upper case and actual letters lower case: like : "USoUUSt") (Unknown, Stable Letter "o", Unknown, Unknown, "Stable Letter "t")
 
-And Known Words List : Letters that may fill up one of the unknown-word blanks. eg. "rb", "axc".
+And Known Letters List (yellow letters) : Letters that may fill up one of the unknown-word blanks. eg. input: "rb"
 
-And Known Impossibilities List : Letters that are not there in the word.
+And Known Impossibilities List (grey letters) : Letters that are not there in the word. eg. "acyz"
 ___________________________________________________________________________________________________________________________________
 """)
 
-    verbosity = int(input("Please enter the VERBOSITY you desire from the robot: "))
+    # verbosity = int(input("Please enter the VERBOSITY you desire from the robot: "))
+    verbosity = 0  # Use the notebook if you'd like more verbosity, to see how the code works
 
     while True:
         try:
-            word_configuration = input("Word Configuration : ").strip()
+            word_configuration = input("\n\n\n START! Enter Word Configuration (without spaces) : ").strip()
             if word_configuration.lower()=="exit":
                 break
                 # raise()
@@ -159,14 +160,14 @@ ________________________________________________________________________________
                 
                 i += 1
                 
-            unknown_variables = input("Known Words : ")
+            unknown_variables = input("Enter Known Letters (without spaces) : ")
 
-            known_impossibles = input("Known Impossibles : ")
+            known_impossibles = input("Enter Known Impossibles (without spaces) : ")
 
-            print("Starting the Algorithm with inputs: {}, {}, {} and verbosity {}".format(final_word_configuration, 
-                                                                                            unknown_variables,
-                                                                                            known_impossibles,
-                                                                                            verbosity))
+            print("Starting the Algorithm with inputs: {}, {}, {} and verbosity {}".format          (final_word_configuration, 
+                                unknown_variables,
+                                known_impossibles,
+                                verbosity))
 
             wordle_possibilities(final_word_configuration, unknown_variables, known_impossibles, verbosity)
         except Exception as e:
