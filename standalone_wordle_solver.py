@@ -1,6 +1,6 @@
 import numpy as np
 
-dictionary_location = './english-words/words_alpha.txt'
+dictionary_location = './english-words/five_letter_english_words.txt'
 wordle_word_length = 5
 
 with open(dictionary_location) as word_file:
@@ -14,7 +14,7 @@ for word in english_words:
 five_letter_english_words.sort()
 
 print("Example dictionary words: ", five_letter_english_words[:10])
-print(dictionary_location, "DICTIONARY WORKING WELL... {} words loaded in memory.".format(len(five_letter_english_words)))
+print(dictionary_location, "DICTIONARY WORKING WELL... {} five letter english words loaded in memory.".format(len(five_letter_english_words)))
 
 # print("robot" in five_letter_english_words)
 
